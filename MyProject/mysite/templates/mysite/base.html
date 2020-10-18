@@ -1,0 +1,296 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    {% block title %}
+
+    {% endblock title %}
+
+    <style> 
+        html{
+            height: 100%;
+        }
+        body{
+            position: relative;
+            min-height: 100%;
+            
+        }
+        
+        #myDIV {
+          /* animation: mymove 8s infinite; */
+          
+          background-color: #e3f2fd;
+        }
+        
+        /* @keyframes mymove {
+          from {background-color: #A3D9E7}
+          to {background-color :  #e3f2fd;}
+        } */
+        .footer{
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            
+        }
+
+    /* footer css*/
+
+    body{
+    font-family:Roboto;
+}
+
+footer{
+     background-color: #33383c;
+     padding:70px 0px;
+}	       
+
+footer ul li{
+    padding:5px 0px;
+}
+
+.adress span , .contact span , .social span{
+   color: #FFF; 
+   font-weight: 800; 
+   padding-bottom: 10px; 
+   margin-bottom: 20px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 20px;
+   letter-spacing: 3px;
+}
+ 
+.adress li p , .contact li a , .social li a{
+    color:#FFF;
+    letter-spacing: 2px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.social li{
+    float:left;
+}
+
+.adress , .contact , .social {
+    list-style: none;
+}
+
+.fa{
+    color:#9c9c9c;
+    margin-right: 15px;
+    font-size:14px;
+}
+
+
+
+        
+        </style>
+
+  </head>
+  <body>
+
+    
+    <nav id="myDIV" class="navbar navbar-expand-lg navbar-light shadow-sm"
+     style="background-color: #e3f2fd; font-family: 'Times New Roman', Times, serif; font-size: 20px;font-weight: bold;">
+        <div class="container">
+            <a class="navbar-brand" href="{%url 'home' %}">DjangoLearner</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="{%url 'courses' %}">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="{%url 'blog' %}">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'pricing' %}">Pricing</a>
+                    </li>
+                
+                
+                </ul> 
+                
+                <div class="btn">
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#LoginModal">LogIn</button>
+
+                       <!-- Modal Login -->
+                        <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                ...
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#signupModal">SignUp</button>
+
+                             <!-- Modal SignUp -->
+                            <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </nav>
+    
+  
+        {% block content %}
+            <!-- different content page goes inside with the above and below code same -->
+            
+        {% endblock content %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br><br><br>
+  
+
+
+
+
+<footer>
+    <div class="container">
+      <div class="row">
+      
+               <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                   <ul class="adress">
+                        <span>Adress</span>    
+                        <li>
+                           <p>A new emeging company for coder
+                               in the noob can join to learn
+                           </p>
+                         </li>
+                              
+                         <li>
+                           <p>+90 1234 56789</p>
+                         </li>
+                              
+                         <li>
+                           <p>info@gmail.com</p>
+                         </li>
+                    </ul>
+               </div>
+               
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                   <ul class="contact">
+                        <span>Important Link</span>    
+                        <li>
+                           <a href="#">Home</a>
+                         </li>
+                              
+                         <li>
+                            <a href="#">Pricing</a>
+                         </li>
+                              
+                         <li>
+                           <a href="#">Blog</a>
+                         </li>
+                              
+                         <li>
+                            <a href="#">Courses </a>
+                         </li>
+                              
+                         <li>
+                           <a href="#">privacy Policy</a>
+                        </li>
+                   </ul>
+               </div>
+          
+               <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <ul class="social">
+                             <span>Social</span>    
+                              <li>
+                                   <a href="#"><i class="fa fa-facebook fa-5x"></i></a>
+                              </li>
+                             
+                              <li>
+                                   <a href="#"><i class="fa fa-github fa-5x"></i></a>
+                              </li>
+                               
+                              <li>
+                                   <a href="#"><i class="fa fa-linkedin fa-5x"></i></a>
+                              </li>
+                              
+                              <li>
+                                   <a href="#"><i class="fa fa-tumblr fa-5x"></i></a>
+                              </li>
+                               
+                              <li>
+                                   <a href="#"><i class="fa fa-google-plus fa-5x"></i></a>
+                             </li>
+                             <br>
+                             <span>
+                                <a href="{% url 'optin' %}" style="text-decoration: none;">Subscribe here</a>
+                            </span>
+                             
+                    </ul>
+                </div>
+                
+          
+          </div> 
+       </div>
+   </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+
+
+</body>
+</html>
